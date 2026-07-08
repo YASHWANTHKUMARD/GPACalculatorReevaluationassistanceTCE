@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sgpaFragment">
+
+    <fragment
+        android:id="@+id/sgpaFragment"
+        android:name="com.example.gpacalculatorreevaluationassistancetce.SgpaFragment"
+        android:label="SGPA Calculator"
+        tools:layout="@layout/fragment_sgpa" />
+
+    <fragment
+        android:id="@+id/cgpaFragment"
+        android:name="com.example.gpacalculatorreevaluationassistancetce.CgpaFragment"
+        android:label="CGPA Calculator"
+        tools:layout="@layout/fragment_cgpa" />
+
+    <fragment
+        android:id="@+id/goalFragment"
+        android:name="com.example.gpacalculatorreevaluationassistancetce.GoalFragment"
+        android:label="Goal Tracker"
+        tools:layout="@layout/fragment_goal" />
+</navigation>
