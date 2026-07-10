@@ -22,4 +22,10 @@
         android:name="com.example.gpacalculatorreevaluationassistancetce.GoalFragment"
         android:label="Goal Tracker"
         tools:layout="@layout/fragment_goal" />
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.gpacalculatorreevaluationassistancetce.AboutFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_about" />
 </navigation>

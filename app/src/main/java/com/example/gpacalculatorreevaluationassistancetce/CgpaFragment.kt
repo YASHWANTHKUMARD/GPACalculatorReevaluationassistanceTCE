@@ -27,6 +27,16 @@ class CgpaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Animation for the logo
+        binding.cvLogoCgpa.alpha = 0f
+        binding.cvLogoCgpa.translationY = 50f
+        binding.cvLogoCgpa.animate()
+            .alpha(1f)
+            .translationY(0f)
+            .setDuration(800L)
+            .setInterpolator(android.view.animation.DecelerateInterpolator())
+            .start()
+
         binding.btnCalculateCgpa.setOnClickListener {
             hideKeyboard()
             calculateCgpa()

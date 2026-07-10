@@ -3,10 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?android:attr/windowBackground">
+    android:layout_height="match_parent">
 
-    <!-- Scrollable Area for Courses -->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="0dp"
@@ -23,13 +21,47 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/llCourseContainer"
+            <!-- Glass Logo Container -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvLogo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="@color/glass_bg"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/glass_border"
+                app:strokeWidth="2dp">
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@string/app_logo_desc"
+                    android:src="@drawable/logo" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                app:cardBackgroundColor="@color/glass_bg"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/glass_border"
+                app:strokeWidth="1dp">
 
-            <!-- Add Course Button aligned at the end of the list -->
+                <LinearLayout
+                    android:id="@+id/llCourseContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp" />
+            </com.google.android.material.card.MaterialCardView>
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnAddCourse"
                 style="@style/Widget.Material3.Button.TonalButton"
@@ -37,43 +69,59 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="32dp"
+                android:backgroundTint="@color/glass_bg"
                 android:text="@string/add_course"
-                app:icon="@android:drawable/ic_input_add" />
+                android:textColor="@color/white"
+                app:icon="@android:drawable/ic_input_add"
+                app:iconTint="@color/white"
+                app:strokeColor="@color/glass_border"
+                app:strokeWidth="1dp" />
         </LinearLayout>
     </ScrollView>
 
-    <!-- Fixed Footer for Result and Calculation -->
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/llFooter"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
-        android:elevation="8dp"
-        android:orientation="vertical"
-        android:padding="16dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/glass_bg"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/glass_border"
+        app:strokeWidth="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/tvSgpaResult"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:gravity="center"
-            android:text="SGPA: 0.00"
-            android:textColor="?attr/colorPrimary"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <Button
-            android:id="@+id/btnCalculateSgpa"
-            style="@style/Widget.Material3.Button"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="@string/calculate_sgpa"
-            android:textSize="18sp" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tvSgpaResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:text="SGPA: 0.00"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCalculateSgpa"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/calculate_sgpa"
+                android:textColor="@color/white"
+                app:backgroundTint="#33FFFFFF"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/glass_border"
+                app:strokeWidth="1dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

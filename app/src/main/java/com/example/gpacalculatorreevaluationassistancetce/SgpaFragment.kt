@@ -28,6 +28,16 @@ class SgpaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Animation for the logo
+        binding.cvLogo.alpha = 0f
+        binding.cvLogo.translationY = 50f
+        binding.cvLogo.animate()
+            .alpha(1f)
+            .translationY(0f)
+            .setDuration(800L)
+            .setInterpolator(android.view.animation.DecelerateInterpolator())
+            .start()
+
         // Restore state or add initial course
         if (savedInstanceState != null) {
             val grades = savedInstanceState.getStringArrayList("grades")

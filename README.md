@@ -1,4 +1,8 @@
-# GPA Calculator & Reevaluation Assistance (TCE)
+# TCE GradePro
+
+<p align="center">
+  <img src="logo.png" alt="TCE GradePro Logo" width="300">
+</p>
 
 A robust and user-friendly Android application designed for students of Thiagarajar College of Engineering (TCE) to easily calculate their SGPA, CGPA, and track their academic goals.
 

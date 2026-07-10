@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GPA Calculator (TCE)</string>
+    <string name="app_name">TCE GradePro</string>
     <string name="sgpa_calculator">SGPA Calculator</string>
     <string name="cgpa_calculator">CGPA Calculator</string>
     <string name="goal_tracker">Goal Tracker</string>
@@ -17,4 +17,13 @@
     <string name="target_cgpa">Target CGPA</string>
     <string name="current_cgpa">Current CGPA</string>
     <string name="total_credits_so_far">Total Credits Earned So Far</string>
+    <string name="app_logo_desc">TCE GradePro Logo</string>
+    <string name="about">About</string>
+    <string name="calculation_method">Calculation Method</string>
+    <string name="sgpa_explanation_title">SGPA Calculation</string>
+    <string name="sgpa_explanation_body">SGPA (Semester Grade Point Average) is calculated by multiplying the grade points obtained in each course by its credits, summing these products, and dividing by the total credits of the semester.\n\nFormula:\nSGPA = Σ(Grade Points × Credits) / Σ(Total Credits)</string>
+    <string name="cgpa_explanation_title">CGPA Calculation</string>
+    <string name="cgpa_explanation_body">CGPA (Cumulative Grade Point Average) is calculated by taking the sum of (SGPA × Credits) for all semesters and dividing it by the total credits earned so far.\n\nFormula:\nCGPA = Σ(SGPA × Credits) / Σ(Total Credits)</string>
+    <string name="goal_tracker_explanation_title">Goal Tracker</string>
+    <string name="goal_tracker_explanation_body">The goal tracker calculates the required SGPA for your current semester to reach a target CGPA.\n\nFormula:\nRequired SGPA = (Target CGPA × Total Credits - Current CGPA × Earned Credits) / Current Semester Credits</string>
 </resources>

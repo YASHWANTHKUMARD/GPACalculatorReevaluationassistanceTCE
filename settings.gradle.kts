@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "GPA Calculator& Reevaluation assistance(TCE)"
+rootProject.name = "TCE GradePro"
 include(":app")
  

@@ -27,6 +27,16 @@ class GoalFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Animation for the logo
+        binding.cvLogoGoal.alpha = 0f
+        binding.cvLogoGoal.translationY = 50f
+        binding.cvLogoGoal.animate()
+            .alpha(1f)
+            .translationY(0f)
+            .setDuration(800L)
+            .setInterpolator(android.view.animation.DecelerateInterpolator())
+            .start()
+
         binding.btnCalculateGoal.setOnClickListener {
             hideKeyboard()
             calculateGoal()

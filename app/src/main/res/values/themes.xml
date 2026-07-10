@@ -1,12 +1,50 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.GPACalculatorReevaluationAssistanceTCE" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/purple_500</item>
+    <style name="Base.Theme.TCEGradePro" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Main Colors -->
+        <item name="colorPrimary">@color/grad_start</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="android:statusBarColor">@color/grad_start</item>
+        <item name="android:windowBackground">@drawable/bg_main_gradient</item>
+
+        <!-- Bottom Nav Indicator -->
+        <item name="colorContainer">#33FFFFFF</item>
+        <item name="colorOnContainer">@color/white</item>
+
+        <!-- Modern Typography -->
+        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
 
-    <style name="Theme.GPACalculatorReevaluationAssistanceTCE" parent="Base.Theme.GPACalculatorReevaluationAssistanceTCE" />
+    <style name="Theme.TCEGradePro" parent="Base.Theme.TCEGradePro" />
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.TCEGradePro.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="postSplashScreenTheme">@style/Theme.TCEGradePro</item>
+    </style>
+
+    <!-- Custom Style for Glass Cards -->
+    <style name="GlassCardStyle">
+        <item name="android:background">@drawable/glass_card</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <!-- Glass TextInputStyle -->
+    <style name="GlassInputStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/glass_bg</item>
+        <item name="boxStrokeColor">@color/glass_border</item>
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="hintTextColor">@color/white</item>
+        <item name="android:textColorHint">#CCFFFFFF</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+    </style>
+
+    <style name="RoundedImageView" parent="">
+        <item name="cornerSize">24dp</item>
+    </style>
 </resources>
